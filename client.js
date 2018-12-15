@@ -54,12 +54,15 @@ function updateEmployees(arr) {
          <td>${arr[i].id}</td>,
          <td>${arr[i].title}</td>,
          <td>${arr[i].annualSalary}</td>
+         <td><button id="deleteBtn">Delete</button></td>
          </tr>`;
         el.append(employeesName);
         costTotal += Number(arr[i].annualSalary);
+        $('#empAppend').on('click', '#deleteBtn', deleteEmp);
         costCal(costTotal)
 
     }
+}
 
     function costCal(total) {
         
@@ -69,13 +72,18 @@ function updateEmployees(arr) {
         if (totalCost > 20000) {
             // this turn background-color to red if exceed over $20,000
             $('#costIn').css('background-color', 'red')
+            //$('#deleteBtn').on('click', deleteEmp);
         }
+       
+    }
 
+    function deleteEmp(){
 
+        console.log(this);
+        $(this).parent().parent().remove();
     }
 
 
-}
 
 
 
@@ -86,6 +94,4 @@ function updateEmployees(arr) {
 
 
 
-for (let i = 0; i < employees.length; i++) {
-    console.log(employees[i]);
-}
+
