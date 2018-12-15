@@ -58,6 +58,8 @@ function updateEmployees(arr) {
          </tr>`;
         el.append(employeesName);
         costTotal += Number(arr[i].annualSalary);
+        // this looks at the #empAppend id and on click
+        // on the button with the id= #deleteBtn runs function deleteEmp.
         $('#empAppend').on('click', '#deleteBtn', deleteEmp);
         costCal(costTotal)
 
@@ -72,7 +74,7 @@ function updateEmployees(arr) {
         if (totalCost > 20000) {
             // this turn background-color to red if exceed over $20,000
             $('#costIn').css('background-color', 'red')
-            //$('#deleteBtn').on('click', deleteEmp);
+            
         }
        
     }
@@ -80,6 +82,9 @@ function updateEmployees(arr) {
     function deleteEmp(){
 
         console.log(this);
+        // "this" is now on the delete button inside the table
+        // and it delete the parent().parent() which is the <td></td> 
+        // where the employees names etc... lives
         $(this).parent().parent().remove();
     }
 
