@@ -44,7 +44,7 @@ function updateEmployees(arr) {
 
     let el = $('#empAppend');
     el.empty();
-    
+
     // this loop through the array and append the employees name to DOM
     for (let i = 0; i < arr.length; i++) {
         console.log('this is update employees', arr[i]);
@@ -66,27 +66,27 @@ function updateEmployees(arr) {
     }
 }
 
-    function costCal(total) {
-        
-        // this calculate the monthly cost and append to DOM
-        let totalCost = total / 12;
-        $('#costIn').html('<h4>Monthly total: ' + ' $ ' + Number(totalCost.toFixed(2)) + '</h4>');
-        if (totalCost > 20000) {
-            // this turn background-color to red if exceed over $20,000
-            $('#costIn').css('background-color', 'red')
-            
-        }
-       
+function costCal(total) {
+
+    // this calculate the monthly cost and append to DOM
+    let totalCost = total / 12;
+    $('#costIn').html('<h4>Monthly total: ' + ' $ ' + Number(totalCost.toFixed(2)) + '</h4>');
+    if (totalCost > 20000) {
+        // this turn background-color to red if exceed over $20,000
+        $('#costIn').css('background-color', 'red')
+
     }
 
-    function deleteEmp(){
+}
 
-        console.log(this);
-        // "this" is now on the delete button inside the table
-        // and it delete the parent().parent() which is the <td></td> 
-        // where the employees names etc... lives
-        $(this).parent().parent().remove();
-    }
+function deleteEmp() {
+
+    console.log(this);
+    // "this" is now on the delete button inside the table
+    // and it delete the parent().parent() which is the <td></td> 
+    // where the employees names etc... lives
+    $(this).parent().parent().remove();
+}
 
 
 
