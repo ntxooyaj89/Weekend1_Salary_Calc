@@ -7,46 +7,59 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="jquery.js"></script>
     <script src="client.js"></script>
-    <link rel="stylesheets" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bootstrap.css">
     <title>Salary Calculator</title>
 </head>
 
 <body>
-    <header id="header">
-        <h1>Salary Calculator</h1>
-    </header>
+    
+    <div class="container">
+        <header>
+            <h1>Salary Calculator</h1>
+        </header>
 
-    <input id="nameIn" type="text" placeholder="First Name">
-    <input id="lastNameIn" type="text" placeholder="Last Name">
-    <input id="idIn" type="text" placeholder="ID">
-    <input id="titleIn" type="text" placeholder="Title">
-    <input id="annualSalaryIn" type="text" placeholder="annual salary">
-    <button id="submitBtn">Submit</button>
+    
 
-    <table>
+        <h2>Add Employees</h2>
 
 
-        <tr>
-            <th>Fist Name</th>
-            <th>Last Name</th>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Annual Salary</th>
-
-        </tr>
-        <thead>
-        <tr>
-        <tbody id="empAppend"></tbody>
-        </tr>
-
-        </thead>
-
-        </tbody>
+       <div>
+        <input id="nameIn" type="text" placeholder="First Name">
+        <input id="lastNameIn" type="text" placeholder="Last Name">
+        <input id="idIn" type="number" placeholder="ID">
+        <input id="titleIn" type="text" placeholder="Title">
+        <input id="annualSalaryIn" type="number" placeholder="annual salary">
+        <button id="submitBtn">Submit</button>
+        </div>
+     
+       <div>
+           <h3 id="tag">Employees</h3>
+       </div>
 
 
+        <div>
+        <table class="table table-sm">
 
+            <thead>
+                <tr>
+                    <th>Fist Name</th>
+                    <th>Last Name</th>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Annual Salary</th>
 
-    </table>
+                </tr>
+            </thead>
+            <tbody id="empAppend">
+                
+            </tbody>
+        </table>
+        </div>
+
+<div id="costIn"></div>
+
+</div>
 
 </body>
 
