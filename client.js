@@ -19,6 +19,7 @@ function readyNow() {
     $('#submitBtn').on('click', addEmployee);
 }
 
+// collect employees and push them into employees array
 function addEmployee() {
 
     let collectEmp = new Employees(
@@ -34,6 +35,7 @@ function addEmployee() {
     updateEmployees(employees);
 }
 
+// this function empty the value, append employess to and total cost to DOM.
 function updateEmployees(arr) {
 
     $('#nameIn').val('');
@@ -66,6 +68,8 @@ function updateEmployees(arr) {
     }
 }
 
+
+// this function calculate the total cost and turn background to red when cost is over 20K.
 function costCal(total) {
 
     // this calculate the monthly cost and append to DOM
@@ -79,6 +83,7 @@ function costCal(total) {
 
 }
 
+// this function handle deleting the employees.
 function deleteEmp() {
 
     console.log(this);
