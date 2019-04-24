@@ -1,9 +1,6 @@
 # Weekend Challenge 1: Salary Calculator
 Create an application that records employee salaries and adds salaries up to report monthly costs. 
 
-## Topics Covered
-- JavaScript
-- jQuery - Selectors, append, and event handling
 
 ## Assignment
 
@@ -40,5 +37,4 @@ Mode | Description
 Base | required
 Stretch | optional, stretches your understanding and may require additional research
 
-## Assignment Submission
-Check in your repo, then turn in your work via the Prime Academy Assignment Application at [http://primeacademy.io](http://primeacademy.io), as usual and don't hesitate to hit up the Slack channel as needed!
+
